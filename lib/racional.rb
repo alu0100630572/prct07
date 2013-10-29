@@ -1,4 +1,5 @@
 #! /usr/local/ruby/bin/ruby 
+include Comparable
 
 class Fraccion
   attr_reader :num, :den
@@ -28,11 +29,6 @@ class Fraccion
     @num/@den
   end
   
-  # Metodo que compara si dos numeros racionales son iguales
-  def ==(fraccion)
-    ((@num == fraccion.num) && (@den == fraccion.den))
-  end
-
   # Metodo que calcula el valor absoluto de un numero racional
   def abs
     Fraccion.new(@num.abs, @den.abs)
@@ -81,23 +77,17 @@ class Fraccion
     ((@num * fraccion.den) % (@den * fraccion.num))
   end
 
-  # Metodo que calcula si el numero racional es menor que otro dado
-  def <(fraccion)
-    (@num * fraccion.den) < (@den * fraccion.num)
-  end
-  
-  # Metodo que calcula si el numero racional es mayor que otro dado
-  def >(fraccion)
-    (@num * fraccion.den) > (@den * fraccion.num)
-  end
-
-  # Metodo que calcula si el numero racional es menor o igual que otro dado
-  def <=(fraccion)
-    (@num * fraccion.den) <= (@den * fraccion.num)
+  # Metodo guerra de las galaxias
+  def <=>(fraccion)
+    if ((@num == fraccion.num) && (@den == fraccion.den))
+      return 0
+    end
+    if ((@num * fraccion.den) < (@den * fraccion.num))
+      return -1
+    end
+    if ((@num * fraccion.den) > (@den * fraccion.num))
+      return 1 
+    end
   end
 
-  # Metodo que calcula si el numero racional es mayor o igual que otro dado
-  def >=(fraccion)
-    (@num * fraccion.den) >= (@den * fraccion.num)
-  end
 end
