@@ -1,9 +1,11 @@
 
-Práctica número 6 de Lenguajes y Paradigmas de la Programación
+Práctica número 7 de Lenguajes y Paradigmas de la Programación
 
 Autores: Oliver Valido Ramos Rodrigo Colombo Vlaeminch
 
-La práctica consiste en diseñar una clase para implementar números racionales utilizando el método del desarrollo dirigido por pruebas usando la herramienta Rspec. En el proyecto tenemos los siguientes ficheros:
+La práctica consiste enincluir el módulo Comparable en la clase Fraccion realizada en la práctica anterior y ejecutar el programa en distintas versiones
+de ruby usando la herramienta travis.
+En el proyecto tenemos los siguientes ficheros:
 
     lib/racional.rb
 
