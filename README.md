@@ -13,8 +13,7 @@ En el proyecto tenemos los siguientes ficheros:
       - initialize(num, den) Este es el constructor de la clase Fraccion 
       - gdc(a, b) Este método calcula el máximo comçun divisor 
       - to_s Este método permite imprimir el número racional en formato num/den 
-      - to_f Este método muestra en número racional como flotante 
-      - ==(fraccion) Este método compara si dos números racionales son iguales 
+      - to_f Este método muestra en número racional como flotante  
       - abs Este método permite calcular el valor absoluto de un número racional 
       - reciproco Este método calcula el recíproco de un número racional 
       - -@ Este método cambia el signo del número racional 
