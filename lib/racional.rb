@@ -79,15 +79,7 @@ class Fraccion
 
   # Metodo guerra de las galaxias
   def <=>(fraccion)
-    if ((@num == fraccion.num) && (@den == fraccion.den))
-      return 0
-    end
-    if ((@num * fraccion.den) < (@den * fraccion.num))
-      return -1
-    end
-    if ((@num * fraccion.den) > (@den * fraccion.num))
-      return 1 
-    end
+    @num * fraccion.den <=> @den * fraccion.num
   end
 
 end
